@@ -1,87 +1,110 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 export function HeroSection() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-cream-50 via-cream-50 to-chocolate-100 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-      <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-caramel-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+    <section className="relative w-full bg-gradient-to-br from-cream-50 via-white to-gold-50 overflow-hidden pt-20 pb-16">
+      {/* Soft background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15"></div>
+      <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-caramel-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-40">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
-          <div className="space-y-8">
-            {/* Urgency badge */}
-            <div className="inline-flex items-center gap-2 bg-chocolate-100 px-4 py-2 rounded-full">
-              <span className="text-2xl">⏰</span>
-              <span className="text-sm font-bold text-chocolate-900">Promoção válida por HOJE apenas!</span>
-            </div>
-
-            {/* Main headline */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left content - Story & emotion */}
+          <div className="space-y-8 order-2 lg:order-1">
+            {/* Warm opening */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-chocolate-900 leading-tight text-balance">
-                As Receitas de Páscoa da Vovó Teresinha
+              <p className="text-caramel-700 font-medium text-base tracking-wide">Com todo meu carinho</p>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-chocolate-900 leading-tight text-balance">
+                Receitas que vêm do coração
               </h1>
-              <p className="text-lg sm:text-xl text-chocolate-700">
-                25+ receitas tradicionais + vídeos de como fazer + acesso vitalício
+              <p className="text-xl text-chocolate-700 leading-relaxed max-w-lg">
+                Há mais de 50 anos, coloco amor em cada receita de Páscoa. Agora compartilho com você e sua família toda a magia e carinho que fazem essas receitas especiais.
               </p>
             </div>
 
-            {/* Main value proposition */}
-            <div className="bg-white rounded-xl p-6 border-2 border-gold-300">
-              <div className="flex items-start gap-4">
-                <span className="text-4xl">🎁</span>
+            {/* Emotional value proposition */}
+            <div className="space-y-4">
+              <div className="flex gap-4 items-start">
+                <span className="text-3xl">♥</span>
                 <div>
-                  <p className="font-bold text-chocolate-900 mb-2">Kit Completo Digital</p>
-                  <p className="text-sm text-chocolate-700">
-                    Você recebe tudo por email na hora! Nenhuma espera, nenhuma mensalidade. Uma única compra, acesso para sempre.
-                  </p>
+                  <h3 className="font-bold text-chocolate-900 mb-1">Mais que receitas</h3>
+                  <p className="text-chocolate-700">É tradição, é conexão, é a herança de amor que passa de geração em geração</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <span className="text-3xl">📚</span>
+                <div>
+                  <h3 className="font-bold text-chocolate-900 mb-1">Kit digital completo</h3>
+                  <p className="text-chocolate-700">25+ receitas com vídeos, ingredientes detalhados e técnicas que aprendi ao longo dos anos</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <span className="text-3xl">∞</span>
+                <div>
+                  <h3 className="font-bold text-chocolate-900 mb-1">Seu para sempre</h3>
+                  <p className="text-chocolate-700">Acesso vitalício. Sem mensalidades. Sem expirações. Compartilhe com quem ama.</p>
                 </div>
               </div>
             </div>
 
-            {/* Price and discount */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            {/* Price - emphasizing value, not discount aggression */}
+            <div className="bg-gradient-to-r from-chocolate-50 to-gold-50 rounded-2xl p-6 border border-chocolate-200">
+              <p className="text-chocolate-700 text-sm mb-3">Investimento hoje:</p>
               <div className="flex items-baseline gap-3">
+                <span className="text-4xl font-bold text-chocolate-900">R$ 37,90</span>
                 <span className="text-sm text-chocolate-700 line-through">R$ 685,00</span>
-                <span className="text-5xl font-bold text-caramel-600">R$ 37,90</span>
+                <span className="text-xs font-bold bg-caramel-500 text-white px-3 py-1 rounded-full">94% OFF</span>
               </div>
-              <span className="text-sm font-bold bg-chocolate-900 text-cream-50 px-3 py-1 rounded-full">94% OFF</span>
+              <p className="text-xs text-chocolate-600 mt-3">Uma única compra. Acesso para a vida toda.</p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-chocolate-900 hover:bg-chocolate-800 text-cream-50 font-bold py-6 text-base rounded-xl h-auto">
-                Quero Meu Kit Agora
+            {/* CTAs - warm and inviting */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button 
+                size="lg" 
+                className="bg-chocolate-900 hover:bg-chocolate-800 text-cream-50 font-bold py-7 text-base rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Quero Compartilhar Esse Amor
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-chocolate-900 text-chocolate-900 hover:bg-chocolate-50 font-bold py-6 text-base rounded-xl h-auto">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-chocolate-900 text-chocolate-900 hover:bg-chocolate-50 font-semibold py-7 text-base rounded-xl transition-all duration-300"
+              >
                 Garantia de 7 Dias ✓
               </Button>
             </div>
 
-            {/* Trust signals */}
-            <div className="flex gap-8 pt-4 text-sm">
+            {/* Authentic trust markers */}
+            <div className="flex flex-wrap gap-6 text-sm pt-6 border-t border-chocolate-200">
               <div>
-                <p className="font-bold text-chocolate-900">4.9 ⭐</p>
-                <p className="text-chocolate-700">+500 clientes satisfeitos</p>
+                <p className="font-bold text-chocolate-900 text-lg">50+ Anos</p>
+                <p className="text-chocolate-700">dedicados à culinária</p>
               </div>
               <div>
-                <p className="font-bold text-chocolate-900">50 Anos</p>
-                <p className="text-chocolate-700">de experiência culinária</p>
+                <p className="font-bold text-chocolate-900 text-lg">25+ Receitas</p>
+                <p className="text-chocolate-700">de Páscoa exclusivas</p>
+              </div>
+              <div>
+                <p className="font-bold text-chocolate-900 text-lg">Feito com ♥</p>
+                <p className="text-chocolate-700">em cada detalhe</p>
               </div>
             </div>
           </div>
 
-          {/* Right side - Image placeholder */}
-          <div className="relative h-96 sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-chocolate-200 to-caramel-200 flex items-center justify-center">
+          {/* Right side - Beautiful image of Vovó */}
+          <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl order-1 lg:order-2 group">
             <Image
-              src="/vovo-teresinha.jpg"
-              alt="Vovó Teresinha com seu kit especial de receitas de Páscoa"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vov%C3%B3%20pintando%20coelho%20da%20p%C3%A1scoa-nz5ANoMcmhZrx7oi5ZKWhmQsgskrjN.png"
+              alt="Vovó Teresinha pintando coelho de páscoa com amor e dedicação"
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-chocolate-900/20 to-transparent"></div>
           </div>
         </div>
       </div>

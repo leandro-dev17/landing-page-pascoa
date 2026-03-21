@@ -1,8 +1,7 @@
 import { HeroSection } from '@/components/hero-section'
-import { AboutSection } from '@/components/about-section'
-import { BenefitsSection } from '@/components/benefits-section'
-import { SocialProofSection } from '@/components/social-proof-section'
-import { HowItWorksSection } from '@/components/how-it-works-section'
+import { StoriesSection } from '@/components/stories-section'
+import { WhatYouGetSection } from '@/components/what-you-get-section'
+import { WhyChooseSection } from '@/components/why-choose-section'
 import { FAQSection } from '@/components/faq-section'
 import { CTAFinalSection } from '@/components/cta-final-section'
 import { Footer } from '@/components/footer'
@@ -16,24 +15,19 @@ export default function Home() {
         <HeroSection />
       </section>
 
-      {/* About Section */}
-      <section id="about">
-        <AboutSection />
+      {/* Stories Section - Authentic moments */}
+      <section id="stories">
+        <StoriesSection />
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits">
-        <BenefitsSection />
+      {/* What You Get Section */}
+      <section id="what-you-get">
+        <WhatYouGetSection />
       </section>
 
-      {/* Social Proof Section */}
-      <section id="social-proof">
-        <SocialProofSection />
-      </section>
-
-      {/* How It Works Section */}
-      <section id="how-it-works">
-        <HowItWorksSection />
+      {/* Why Choose Section */}
+      <section id="why-choose">
+        <WhyChooseSection />
       </section>
 
       {/* FAQ Section */}
