@@ -57,7 +57,7 @@ export function HowItWorksSection() {
         {/* How It Works */}
         <div className="mb-20">
           <div className="text-center mb-12 space-y-4">
-            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-chocolate-900 text-balance">
+            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-chocolate-900 text-balance">
               Como Funciona
             </h2>
             <p className="text-lg text-chocolate-700">
@@ -96,7 +96,7 @@ export function HowItWorksSection() {
             <p className="text-sm font-bold text-chocolate-900 bg-white w-fit px-4 py-2 rounded-full mx-auto">
               ✨ SUPER BÔNUS ✨
             </p>
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-chocolate-900 text-balance">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-chocolate-900 text-balance">
               Receba R$ 358,00 em Bônus
             </h2>
             <p className="text-lg text-chocolate-800">

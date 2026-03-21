@@ -18,7 +18,7 @@ export function AboutSection() {
           {/* Content */}
           <div className="space-y-6 order-1 lg:order-2">
             <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-chocolate-900 text-balance">
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-chocolate-900 text-balance">
                 A História da Vovó Teresinha
               </h2>
               <p className="text-lg text-chocolate-700 leading-relaxed">

@@ -6,7 +6,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 pb-12 border-b border-chocolate-700">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-playfair font-bold text-white">
+            <h3 className="text-xl font-serif font-bold text-white">
               Vovó Teresinha
             </h3>
             <p className="text-sm text-cream-100">

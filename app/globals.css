@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Font variables */
+  --font-playfair: 'Playfair Display', serif;
+  --font-lato: 'Lato', sans-serif;
+  
   /* Easter/Chocolate Theme Colors */
   --background: #fafaf7;
   --foreground: #1a1a17;
@@ -123,14 +127,16 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-lato), sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair font-bold tracking-tight;
+    font-family: var(--font-playfair), serif;
+    @apply font-bold tracking-tight;
   }
   
   p, a, span, li {
-    @apply font-lato;
+    font-family: var(--font-lato), sans-serif;
   }
 }
 

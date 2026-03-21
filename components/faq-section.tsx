@@ -46,7 +46,7 @@ export function FAQSection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-chocolate-900 text-balance">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-chocolate-900 text-balance">
             Perguntas Frequentes
           </h2>
           <p className="text-lg text-chocolate-700">

@@ -20,7 +20,7 @@ export function HeroSection() {
 
             {/* Main headline */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-chocolate-900 leading-tight text-balance">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-chocolate-900 leading-tight text-balance">
                 As Receitas de Páscoa da Vovó Teresinha
               </h1>
               <p className="text-lg sm:text-xl text-chocolate-700">

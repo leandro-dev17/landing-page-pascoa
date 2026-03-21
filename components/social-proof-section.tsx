@@ -4,7 +4,7 @@ export function SocialProofSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-chocolate-900 text-balance">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-chocolate-900 text-balance">
             Confira o Que Nossos Clientes Falam
           </h2>
           <p className="text-lg text-chocolate-700">
@@ -15,7 +15,7 @@ export function SocialProofSection() {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="text-center">
-            <p className="text-5xl font-playfair font-bold text-chocolate-900 mb-2">
+            <p className="text-5xl font-serif font-bold text-chocolate-900 mb-2">
               500+
             </p>
             <p className="text-chocolate-700">
@@ -23,7 +23,7 @@ export function SocialProofSection() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-5xl font-playfair font-bold text-chocolate-900 mb-2">
+            <p className="text-5xl font-serif font-bold text-chocolate-900 mb-2">
               4.9 ⭐
             </p>
             <p className="text-chocolate-700">
@@ -31,7 +31,7 @@ export function SocialProofSection() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-5xl font-playfair font-bold text-chocolate-900 mb-2">
+            <p className="text-5xl font-serif font-bold text-chocolate-900 mb-2">
               50
             </p>
             <p className="text-chocolate-700">

@@ -8,7 +8,7 @@ export function CTAFinalSection() {
           {/* Left content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-white text-balance">
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white text-balance">
                 Garantia de 7 Dias 100%
               </h2>
               <p className="text-lg text-cream-100">
