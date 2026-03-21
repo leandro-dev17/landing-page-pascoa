@@ -1,7 +1,8 @@
 import { HeroSection } from '@/components/hero-section'
+import { PerceivedValueSection } from '@/components/perceived-value-section'
+import { EbookChaptersSection } from '@/components/ebook-chapters-section'
+import { DetailedBonusesSection } from '@/components/detailed-bonuses-section'
 import { StoriesSection } from '@/components/stories-section'
-import { WhatYouGetSection } from '@/components/what-you-get-section'
-import { WhyChooseSection } from '@/components/why-choose-section'
 import { FAQSection } from '@/components/faq-section'
 import { CTAFinalSection } from '@/components/cta-final-section'
 import { Footer } from '@/components/footer'
@@ -15,19 +16,24 @@ export default function Home() {
         <HeroSection />
       </section>
 
-      {/* Stories Section - Authentic moments */}
+      {/* Perceived Value Section */}
+      <section id="value">
+        <PerceivedValueSection />
+      </section>
+
+      {/* E-book Chapters Section */}
+      <section id="chapters">
+        <EbookChaptersSection />
+      </section>
+
+      {/* Detailed Bonuses Section */}
+      <section id="bonuses">
+        <DetailedBonusesSection />
+      </section>
+
+      {/* Stories Section - Histórias Feitas com Amor */}
       <section id="stories">
         <StoriesSection />
-      </section>
-
-      {/* What You Get Section */}
-      <section id="what-you-get">
-        <WhatYouGetSection />
-      </section>
-
-      {/* Why Choose Section */}
-      <section id="why-choose">
-        <WhyChooseSection />
       </section>
 
       {/* FAQ Section */}
