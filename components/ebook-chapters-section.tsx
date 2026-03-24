@@ -49,55 +49,64 @@ export function EbookChaptersSection() {
   ]
 
   return (
-    <section className="w-full bg-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-gradient-to-b from-slate-50 via-blue-50 to-indigo-50 py-24 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-20 left-10 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl -z-10"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-chocolate-900 mb-4">
-            Estrutura do E-book
+        <div className="text-center mb-24">
+          <h2 className="text-5xl sm:text-6xl font-serif font-black text-slate-900 mb-6 text-balance">
+            Estrutura Completa do E-book
           </h2>
-          <p className="text-xl text-chocolate-700 max-w-2xl mx-auto">
-            3 capítulos que te levam do iniciante ao profissional em vendas de Páscoa
+          <p className="text-xl text-slate-700 max-w-2xl mx-auto font-medium">
+            3 capítulos estratégicos que te levam do iniciante ao empreendedor de sucesso
           </p>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mt-6 rounded-full"></div>
         </div>
 
         {/* Chapters Grid */}
-        <div className="space-y-16">
+        <div className="space-y-20">
           {chapters.map((chapter, idx) => (
             <div key={idx} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               {/* Text Content */}
-              <div className={idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}>
-                <div className={`inline-block bg-gradient-to-r ${chapter.color} text-white rounded-full px-6 py-2 mb-6 font-bold text-lg`}>
+              <div className={`${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                {/* Number Badge */}
+                <div className={`inline-block bg-gradient-to-r ${chapter.color} text-white rounded-full px-8 py-3 mb-8 font-bold text-xl shadow-xl`}>
                   Capítulo {chapter.number}
                 </div>
                 
-                <h3 className="text-3xl sm:text-4xl font-serif font-bold text-chocolate-900 mb-4">
+                <h3 className="text-4xl sm:text-5xl font-serif font-black text-slate-900 mb-6 text-balance">
                   {chapter.title}
                 </h3>
                 
-                <p className="text-lg text-chocolate-700 mb-8">
+                <p className="text-xl text-slate-700 mb-12 leading-relaxed font-medium">
                   {chapter.description}
                 </p>
 
-                <ul className="space-y-3">
+                {/* Topics with enhanced styling */}
+                <ul className="space-y-4">
                   {chapter.topics.map((topic, i) => (
-                    <li key={i} className="flex gap-3 items-start">
-                      <span className="text-gold-500 font-bold text-xl flex-shrink-0">✓</span>
-                      <span className="text-chocolate-700 font-medium">{topic}</span>
+                    <li key={i} className="flex gap-4 items-start group">
+                      <span className={`text-2xl font-black flex-shrink-0 group-hover:scale-125 transition-transform`}>
+                        ✓
+                      </span>
+                      <span className="text-lg text-slate-700 font-semibold group-hover:text-slate-900 transition-colors">{topic}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Image */}
-              <div className={`relative h-96 rounded-3xl overflow-hidden shadow-2xl ${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+              {/* Image with enhanced styling */}
+              <div className={`relative h-96 sm:h-[500px] rounded-3xl overflow-hidden shadow-2xl group ${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                 <Image
                   src={chapter.image}
                   alt={chapter.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent`}></div>
               </div>
             </div>
           ))}
