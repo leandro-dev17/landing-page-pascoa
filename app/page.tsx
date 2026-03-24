@@ -1,8 +1,8 @@
 import { HeroSection } from '@/components/hero-section'
-import { AboutSection } from '@/components/about-section'
-import { BenefitsSection } from '@/components/benefits-section'
-import { SocialProofSection } from '@/components/social-proof-section'
-import { HowItWorksSection } from '@/components/how-it-works-section'
+import { PerceivedValueSection } from '@/components/perceived-value-section'
+import { EbookChaptersSection } from '@/components/ebook-chapters-section'
+import { DetailedBonusesSection } from '@/components/detailed-bonuses-section'
+import { StoriesSection } from '@/components/stories-section'
 import { FAQSection } from '@/components/faq-section'
 import { CTAFinalSection } from '@/components/cta-final-section'
 import { Footer } from '@/components/footer'
@@ -16,24 +16,24 @@ export default function Home() {
         <HeroSection />
       </section>
 
-      {/* About Section */}
-      <section id="about">
-        <AboutSection />
+      {/* Perceived Value Section */}
+      <section id="value">
+        <PerceivedValueSection />
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits">
-        <BenefitsSection />
+      {/* E-book Chapters Section */}
+      <section id="chapters">
+        <EbookChaptersSection />
       </section>
 
-      {/* Social Proof Section */}
-      <section id="social-proof">
-        <SocialProofSection />
+      {/* Detailed Bonuses Section */}
+      <section id="bonuses">
+        <DetailedBonusesSection />
       </section>
 
-      {/* How It Works Section */}
-      <section id="how-it-works">
-        <HowItWorksSection />
+      {/* Stories Section - Histórias Feitas com Amor */}
+      <section id="stories">
+        <StoriesSection />
       </section>
 
       {/* FAQ Section */}
