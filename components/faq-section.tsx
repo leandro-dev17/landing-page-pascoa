@@ -42,42 +42,47 @@ export function FAQSection() {
   ]
 
   return (
-    <section className="w-full bg-cream-50 py-20 sm:py-28 lg:py-32">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-gradient-to-b from-emerald-50 via-teal-50 to-cyan-50 py-24 sm:py-32 lg:py-40 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-200/30 rounded-full blur-3xl -z-10"></div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-chocolate-900 text-balance">
-            Perguntas Frequentes
+        <div className="text-center mb-24 space-y-6">
+          <h2 className="text-5xl sm:text-6xl font-serif font-black text-emerald-900 text-balance">
+            ❓ Perguntas Frequentes
           </h2>
-          <p className="text-lg text-chocolate-700">
-            Tudo que você precisa saber sobre o kit
+          <p className="text-xl text-emerald-800 font-medium">
+            Tudo que você precisa saber sobre o kit completo
           </p>
+          <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-600 mx-auto rounded-full"></div>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-3">
+        <div className="space-y-4 mb-16">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-cream-200 hover:border-chocolate-300 overflow-hidden transition-all duration-300"
+              className="bg-white/60 backdrop-blur-sm rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 hover:shadow-xl overflow-hidden transition-all duration-300 group"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 hover:bg-cream-50 transition-colors duration-200"
+                className="w-full flex items-center justify-between p-6 hover:bg-emerald-50/50 transition-colors duration-200"
               >
-                <h3 className="text-left font-bold text-chocolate-900 pr-4">
+                <h3 className="text-left font-black text-emerald-900 pr-4 text-lg">
                   {faq.question}
                 </h3>
                 <ChevronDown
-                  className={`flex-shrink-0 w-5 h-5 text-chocolate-700 transition-transform duration-300 ${
+                  className={`flex-shrink-0 w-6 h-6 text-emerald-600 font-black transition-transform duration-300 group-hover:text-emerald-800 ${
                     openIndex === index ? 'transform rotate-180' : ''
                   }`}
                 />
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-6 pt-0 border-t border-cream-200 bg-cream-50">
-                  <p className="text-chocolate-700 leading-relaxed">
+                <div className="px-6 pb-6 pt-0 border-t-2 border-emerald-200 bg-emerald-50/50">
+                  <p className="text-emerald-800 leading-relaxed text-lg font-medium">
                     {faq.answer}
                   </p>
                 </div>
@@ -87,19 +92,32 @@ export function FAQSection() {
         </div>
 
         {/* CTA at bottom */}
-        <div className="mt-12 bg-gradient-easter rounded-2xl p-8 text-center">
-          <p className="text-chocolate-900 font-semibold mb-3">
-            Ainda tem dúvida?
-          </p>
-          <p className="text-chocolate-700 mb-6">
-            Entre em contato direto com a Vovó Teresinha por email ou WhatsApp
-          </p>
-          <a
-            href="https://wa.me/5511999999999"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-xl transition-colors duration-200"
-          >
-            Fale com a Vovó no WhatsApp
-          </a>
+        <div className="relative">
+          {/* Glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/40 via-teal-400/40 to-cyan-400/40 rounded-3xl blur-3xl"></div>
+
+          <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 rounded-3xl p-12 text-center shadow-2xl border-2 border-emerald-400/50 backdrop-blur-sm">
+            <p className="text-3xl mb-6">💬</p>
+
+            <p className="text-white font-bold mb-4 text-lg">
+              Ainda tem dúvida?
+            </p>
+
+            <p className="text-emerald-100 mb-8 text-xl font-medium">
+              Entre em contato direto com a Vovó Teresinha por email ou WhatsApp
+            </p>
+
+            <a
+              href="https://wa.me/5511999999999"
+              className="inline-block bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600 text-white font-black py-4 px-10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
+            >
+              💚 Fale com a Vovó no WhatsApp
+            </a>
+
+            <p className="text-emerald-200 text-sm mt-6 italic">
+              Resposta rápida, atendimento com carinho
+            </p>
+          </div>
         </div>
       </div>
     </section>
